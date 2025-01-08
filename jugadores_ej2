@@ -1,0 +1,38 @@
+public class Jugadores {
+    //Atributos
+    String nombre, posicion, equipo;
+    int dorsal;
+
+    //Metodos
+    String obtenerNombre () {             //obtener(set) es una función ya que devuelve algo
+        return nombre;
+    }
+    
+    String obtenerPosicion () {
+        return posicion;
+    }
+
+    String obtenerEquipo () {
+        return equipo;
+    }
+
+    int obtenerDorsal () {
+        return dorsal;
+    }
+
+    void establecerNombre (String valorNombre){
+        nombre=valorNombre;
+    }
+
+    void establecerPosición (String valorPosicion){            //establecer(get) es un metodo ya que no devuelve nada y es void.
+        posicion=valorPosicion;
+    }
+
+    void establecerEquipo (String valorEquipo){
+        equipo=valorEquipo;
+    }
+
+    void establecerDorsal (int valorDorsal){
+        dorsal=valorDorsal;
+    }
+}
