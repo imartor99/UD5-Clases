@@ -1,0 +1,26 @@
+
+import java.util.List;
+
+public class Grupo {
+    //Atributos
+    String nombre;
+    List<Equipo> equipos;
+
+    //Metodos
+    String obtenerNombre () {             //obtener(set) es una función ya que devuelve algo
+        return nombre;
+    }
+    
+    List<Equipo> obtenerEquipos () {
+        return equipos;
+    }
+
+    void establecerNombre (String valorNombre){            //establecer(get) es un metodo ya que no devuelve nada y es void.
+        nombre=valorNombre;
+    }
+       
+    void establecerEquipo (List valorEquipo){
+        equipos=valorEquipo;
+    }
+
+}
