@@ -1,0 +1,43 @@
+
+import java.time.LocalDate;
+
+public class Partido {
+    //ATRIBUTOS
+    String equipoLocal, equipoVisitante;
+    String resultado;
+    LocalDate fecha;
+
+     //METODOS
+    String obtenerEquipoLocal () {             //obtener(set) es una función ya que devuelve algo
+        return equipoLocal;
+    }
+    
+    String obtenerEquipoVisitante () {
+        return equipoVisitante;
+    }
+
+    String obtenerResultado () {
+        return resultado;
+    }
+
+    LocalDate obtenerfecha () {
+        return fecha;
+    }
+
+    void establecerEquipoLocal (String valorEquipoLocal){
+        equipoLocal=valorEquipoLocal;
+    }
+
+    void establecerEquipoVisitante (String valorEquipoVisitante){            //establecer(get) es un metodo ya que no devuelve nada y es void.
+        equipoVisitante=valorEquipoVisitante;
+    }
+
+    void establecerResultado (String valorResultado){
+        resultado=valorResultado;
+    }
+
+    void establecerFecha (LocalDate valorFecha){
+        fecha=valorFecha;
+    }
+
+}
