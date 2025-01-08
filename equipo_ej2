@@ -1,0 +1,39 @@
+public class Equipo {
+    //Atributos
+    String nombre, federación, entrenador;
+    int numJugadores;
+
+    //Metodos
+    String obtenerNombre () {             //obtener(set) es una función ya que devuelve algo
+        return nombre;
+    }
+    
+    String obtenerFederacion () {
+        return federación;
+    }
+
+    String obtenerEntrenador () {
+        return entrenador;
+    }
+
+    int obtenerNumJugadores () {
+        return numJugadores;
+    }
+
+    void establecerNombre (String valorNombre){
+        nombre=valorNombre;
+    }
+
+    void establecerFederacion (String valorFederación){            //establecer(get) es un metodo ya que no devuelve nada y es void.
+        federación=valorFederación;
+    }
+
+    void establecerEntrenador (String valorEntrenador){
+        entrenador=valorEntrenador;
+    }
+
+    void establecerNumJugadores (int valorNumJugadores){
+        numJugadores=valorNumJugadores;
+    }
+    
+}
