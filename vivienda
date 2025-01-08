@@ -1,0 +1,50 @@
+public class Vivienda {
+    
+        // Atributos de la clase Vivienda
+        String direccion;
+        int numeroHabitaciones;
+        double superficie; // en metros cuadrados
+        boolean tieneGaraje;
+    
+        // Constructor con parámetros
+        public Vivienda(String direccion, int numeroHabitaciones, double superficie, boolean tieneGaraje) {
+            this.direccion = direccion;
+            this.numeroHabitaciones = numeroHabitaciones;
+            this.superficie = superficie;
+            this.tieneGaraje = tieneGaraje;
+        }
+    
+        // Obtenemos y establecemos valores a los diferentes atributos
+        public String obtenerDireccion() {
+            return direccion;
+        }
+    
+        public void establecerDireccion(String direccion) {
+            this.direccion = direccion;
+        }
+    
+        public int obtenerNumeroHabitaciones() {
+            return numeroHabitaciones;
+        }
+    
+        public void establecerNumeroHabitaciones(int numeroHabitaciones) {
+            this.numeroHabitaciones = numeroHabitaciones;
+        }
+    
+        public double obtenerSuperficie() {
+            return superficie;
+        }
+    
+        public void establecerSuperficie(double tamano) {
+            this.superficie = superficie;
+        }
+    
+        public boolean obtenerTieneGaraje() {
+            return tieneGaraje;
+        }
+    
+        public void establecerTieneGaraje(boolean tieneGaraje) {
+            this.tieneGaraje = tieneGaraje;
+        }
+
+}
