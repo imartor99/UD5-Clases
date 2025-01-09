@@ -1,0 +1,39 @@
+public class Autobus {
+    //Atributos
+    String matricula, modelo;
+    double potenciaCV;
+    int numeroPlazas;
+
+    //METODOS
+    void setMatricula (String m){
+        matricula = m;
+    }
+
+    void setModelo (String mo){
+        modelo = mo;
+    }
+
+    void setPotenciaCV (double p){
+        potenciaCV = p;
+    }
+
+    void setNumeroPlazas (int pl){
+        numeroPlazas = pl;
+    }
+
+    String getMatricula(){
+        return matricula;
+    }
+
+    String getModelo(){
+        return modelo;
+    }
+
+    double getPotenciaCV(){
+        return potenciaCV;
+    }
+
+    int getNumeroPlazas(){
+        return numeroPlazas;
+    }
+}
