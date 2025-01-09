@@ -1,0 +1,12 @@
+public class MainAutobus {
+    public static void main(String[] args) {
+        Autobus autobus = new Autobus();  //Creo objeto de la clase autobus
+
+        int numeroPlazas = 50;
+        autobus.setNumeroPlazas(numeroPlazas);
+
+        System.out.printf("Mi autobus tiene "+ autobus.getNumeroPlazas()+ " plazas");
+
+
+    }
+}
