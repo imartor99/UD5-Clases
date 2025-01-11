@@ -1,0 +1,17 @@
+public class MainBicicleta {
+    public static void main(String[] args) {
+        Bicicleta bicicleta = new Bicicleta();
+
+        System.out.println("Color de la bicicleta: " + bicicleta.color);
+        System.out.println("Marcha inicial: " + bicicleta.marcha);
+        System.out.println("Velocidad inicial: " + bicicleta.velocidad + " km/h\n");
+
+        bicicleta.avanzar();
+        bicicleta.avanzar();
+        bicicleta.cambiarMarcha(4);
+        bicicleta.avanzar();
+        bicicleta.frenar();
+        bicicleta.frenar();
+        bicicleta.frenar();
+    }
+}
