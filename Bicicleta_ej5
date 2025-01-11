@@ -1,0 +1,33 @@
+public class Bicicleta {
+    //Atributos
+    static String color = "Negro";
+    static int velocidad = 0;
+    static int marcha = 2;
+
+    //Metodos
+    public static void avanzar() {
+        velocidad += marcha * 5;
+        System.out.println("La bicicleta avanza. Velocidad actual: " + velocidad + " km/h");
+    }
+
+    public static void cambiarMarcha(int nuevaMarcha) {
+        if (nuevaMarcha > 0) {
+            marcha = nuevaMarcha;
+            System.out.println("Marcha cambiada a: " + marcha);
+        } else {
+            System.out.println("La marcha debe ser mayor que 0.");
+        }
+    }
+
+    public static void frenar() {
+        if (velocidad > 0) {
+            velocidad -= 5;
+            if (velocidad < 0) {
+                velocidad = 0;
+            }
+            System.out.println("La bicicleta frena. Velocidad actual: " + velocidad + " km/h");
+        } else {
+            System.out.println("La bicicleta ya está detenida.");
+        }
+    }
+}
