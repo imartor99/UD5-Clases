@@ -1,0 +1,57 @@
+public class Pizza {
+
+    // Atributos
+    String tamaño;
+    String estado;
+    String tipo;
+
+    // Atributos de clase
+    static int totalPedidas = 0;
+    static int totalServidas = 0;
+
+    // Constructor por defecto
+    public Pizza(String tipo, String tamaño) {
+        this.tamaño = tamaño;
+        this.tipo = tipo;
+        this.estado = "pedida";
+        this.totalPedidas++;
+    }
+
+    // Método para servir la pizza
+    public void sirve() {
+        if (this.estado.equals("servida")) {
+            System.out.println("Esta pizza ya ha sido servida.");
+        } else {
+            this.estado = "servida";
+            totalServidas++;
+        }
+    }
+
+    // Métodos para acceder a los atributos
+    public String getTamaño() {
+        return tamaño;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    // Métodos estáticos para obtener el total de pizzas pedidas y servidas
+    public static int getTotalPedidas() {
+        return totalPedidas;
+    }
+
+    public static int getTotalServidas() {
+        return totalServidas;
+    }
+
+    // Metodo TOSTRING
+    @Override
+    public String toString(){
+        return "Pizza " + this.tipo + " " + this.tamaño + ", " + this.estado;
+    }
+}
