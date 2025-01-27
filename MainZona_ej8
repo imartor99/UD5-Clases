@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class MainZona {
+
+    public static void main(String[] args) {
+        // Crear las zonas con las entradas iniciales
+        Zona salaPrincipal = new Zona(1000);
+        Zona zonaCompraVenta = new Zona(200);
+        Zona zonaVIP = new Zona(25);
+
+        Scanner scanner = new Scanner(System.in);
+        int opcion;
+
+        do {
+            // Mostrar el menú
+            System.out.println("\nMENÚ:");
+            System.out.println("1. Mostrar número de entradas libres");
+            System.out.println("2. Vender entradas");
+            System.out.println("3. Salir");
+            System.out.print("Elige una opción: ");
+            opcion = scanner.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    // Mostrar entradas disponibles por zona
+                    System.out.println("\nEntradas disponibles:");
+                    System.out.println("Sala principal: " + salaPrincipal.getEntradasPorVender());
+                    System.out.println("Zona de compra-venta: " + zonaCompraVenta.getEntradasPorVender());
+                    System.out.println("Zona VIP: " + zonaVIP.getEntradasPorVender());
+                    break;
+
+                case 2:
+                    // Vender entradas
+                    System.out.println("\n¿Para qué zona quieres las entradas?");
+                    System.out.println("1. Sala principal");
+                    System.out.println("2. Zona de compra-venta");
+                    System.out.println("3. Zona VIP");
+                    System.out.print("Elige una zona: ");
+                    int zonaElegida = scanner.nextInt();
+
+                    System.out.print("¿Cuántas entradas quieres? ");
+                    int cantidad = scanner.nextInt();
+
+                    // Venta según la zona elegida
+                    switch (zonaElegida) {
+                        case 1:
+                            salaPrincipal.vender(cantidad);
+                            break;
+                        case 2:
+                            zonaCompraVenta.vender(cantidad);
+                            break;
+                        case 3:
+                            zonaVIP.vender(cantidad);
+                            break;
+                        default:
+                            System.out.println("Opción de zona no válida.");
+                    }
+                    break;
+
+                case 3:
+                    // Salir del programa
+                    System.out.println("¡Gracias por usar el sistema de venta de entradas!");
+                    break;
+
+                default:
+                    System.out.println("Opción no válida. Por favor, elige una opción del menú.");
+            }
+        } while (opcion != 3);
+
+        scanner.close();
+    }
+}
