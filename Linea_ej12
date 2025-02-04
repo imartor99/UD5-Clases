@@ -1,0 +1,16 @@
+public class Linea {
+    Punto p1;
+    Punto p2;
+
+    // Constructor de la clase Linea
+    public Linea(Punto p1, Punto p2) {
+        this.p1 = p1;
+        this.p2 = p2;
+    }
+
+    // Método toString para representar la línea como una cadena e imprimir objetos
+    @Override
+    public String toString() {
+        return "Linea formada por los puntos " + p1 + " y " + p2;
+    }
+}
