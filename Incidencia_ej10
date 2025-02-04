@@ -1,0 +1,39 @@
+public class Incidencia {
+
+        private static int contador = 1;
+        private static int pendientes = 0;
+        
+        private int codigo;
+        private int puesto;
+        private String estado;
+        private String descripcion;
+    
+        public Incidencia(int puesto, String descripcion) {
+            this.codigo = contador++;
+            this.puesto = this.puesto; // Se asume que el número de puesto es el mismo que el código
+            this.estado = "pendiente";
+            this.descripcion = "Sin resolver";
+            pendientes++;
+        }
+    
+        public void resuelve(String descripcion) {
+            if (this.estado.equals("pendiente")) {
+                this.estado = "resuelta";
+                this.descripcion = descripcion;
+                pendientes--;
+            }
+        }
+    
+        public static int getPendientes() {
+            return pendientes;
+        }
+    
+        @Override
+        public String toString() {
+            if(estado.equals("pendiente")){
+                return "Incidencia " + codigo + " - Puesto " + puesto + " - " + descripcion + " - " + estado;
+            }
+            else
+            return "Incidencia " + codigo + " - Puesto " + puesto + " - " + estado + " - " + descripcion;
+        }
+}
