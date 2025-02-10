@@ -1,0 +1,64 @@
+public class Cubo {
+    // Atributos
+    double capacidadMaxima;
+    double litrosActuales;
+
+    // Constructor
+    public Cubo(double capacidadMaxima) {
+        this.capacidadMaxima = capacidadMaxima;
+        this.litrosActuales = 0; // Inicialmente vacío
+    }
+
+    // Obtener la capacidad máxima
+    public double getCapacidadMaxima() {
+        return capacidadMaxima;
+    }
+
+    // Obtener los litros actuales
+    public double getLitrosActuales() {
+        return litrosActuales;
+    }
+
+    // Agregar líquido al cubo
+    public void llenar(double cantidad) {
+        if (cantidad > 0) {
+            litrosActuales += cantidad;
+            if (litrosActuales > capacidadMaxima) {
+                litrosActuales = capacidadMaxima; // Evitar desbordamiento
+            }
+        }
+    }
+
+    // Vaciar una cantidad de líquido del cubo
+    public void vaciar(double cantidad) {
+        if (cantidad > 0) {
+            litrosActuales -= cantidad;
+            if (litrosActuales < 0) {
+                litrosActuales = 0; // Evitar valores negativos
+            }
+        }
+    }
+
+    // Transferir líquido de este cubo a otro
+    public void transferirA(Cubo otroCubo, double cantidad) {
+        if (cantidad > 0 && otroCubo != null) {
+            double cantidadTransferida = Math.min(cantidad, this.litrosActuales);
+            double espacioDisponible = otroCubo.capacidadMaxima - otroCubo.litrosActuales;
+            double cantidadFinal = Math.min(cantidadTransferida, espacioDisponible);
+
+            this.vaciar(cantidadFinal);
+            otroCubo.llenar(cantidadFinal);
+        }
+    }
+
+    // Método para mostrar el estado del cubo
+    public void mostrarEstado() {
+        System.out.println("Cubo: " + litrosActuales + "/" + "Capacidad: " + capacidadMaxima + " litros.");
+    }
+
+    // Método toString para representar el estado del cubo
+    @Override
+    public String toString() {
+        return "Cubo [capacidadMaxima=" + capacidadMaxima + ", litrosActuales=" + litrosActuales + "]";
+    }
+}
