@@ -1,0 +1,36 @@
+public class MainCubo {
+    public static void main(String[] args) {
+        // Crear dos cubos con diferentes capacidades
+        Cubo cubo1 = new Cubo(10);
+        Cubo cubo2 = new Cubo(5);
+
+        // Mostrar estado inicial
+        System.out.println("Estado inicial:");
+        cubo1.mostrarEstado();
+        cubo2.mostrarEstado();
+
+        // Llenar el primer cubo con 8 litros
+        System.out.println("Llenamos primer cubo 8L ");
+        cubo1.llenar(8);
+        cubo1.mostrarEstado();
+
+        // Intentar transferir 4 litros al segundo cubo
+        System.out.println("\nTransfiriendo 4 litros del cubo1 al cubo2...");
+        cubo1.transferirA(cubo2, 4);
+
+        // Mostrar estados después de la transferencia
+        cubo1.mostrarEstado();
+        cubo2.mostrarEstado();
+
+        // Intentar llenar más de la capacidad máxima
+        System.out.println("\nIntentando llenar cubo2 con 3 litros más...");
+        cubo2.llenar(3);
+        System.out.println("Al cubo2 solo le entra 1L");
+        cubo2.mostrarEstado();
+
+        // Vaciar el cubo1
+        System.out.println("\nVaciando cubo1 3L");
+        cubo1.vaciar(3);
+        cubo1.mostrarEstado();
+    }
+}
